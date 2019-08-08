@@ -1,5 +1,9 @@
 output "resource_group" {
-  value = "${azurerm_resource_group.hashitraining.id}"
+  value = "${azurerm_resource_group.hashitraining.name}"
+}
+
+output "resource_group_location" {
+  value = "${azurerm_resource_group.hashitraining.location}"
 }
 
 output "network" {
