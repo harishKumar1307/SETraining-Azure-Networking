@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "hashitraining" {
   location = "${var.location}"
 }
 
-source "azurerm_virtual_network" "vnet" {
+resource "azurerm_virtual_network" "vnet" {
   name                = "${var.workshop-prefix}-vnet"
   location            = "${azurerm_resource_group.hashitraining.location}"
   address_space       = ["${var.address_space}"]
